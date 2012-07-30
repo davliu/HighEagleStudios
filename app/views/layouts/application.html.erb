@@ -1,0 +1,23 @@
+<html>
+  <head>
+    <title>High Eagle Studios</title>
+    <%= stylesheet_link_tag 'application' %>
+    <%= javascript_include_tag 'application' %>
+    <%= csrf_meta_tag %>
+    <%= favicon_link_tag('logo_ico.ico') %>
+  </head>
+
+  <body>
+    <div id='header'>
+      <%= link_to image_tag('high_eagle_studios_logo_small.png'), :action => 'index', :controller => 'pages' %>
+    <div id='nav'>
+      <%= link_to "Home", :action => 'index', :controller => 'pages' %>
+      <%= link_to "About", :action => 'about', :controller => 'pages' %>
+    <div id='content'>
+      <%= yield %>
+  </body>
+
+  <footer>
+    &copy; High Eagle Studios <%= Time.new.year %>
+  </footer>
+</html>
