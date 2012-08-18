@@ -5,8 +5,7 @@ class ApplicationController < ActionController::Base
 
   WWW_DOMAIN = 'www.higheaglestudios.com'
   def check_uri
-    puts Rails.env
-    if (request.env['HTTP_HOST'] != WWW_DOMAIN) && Rails.env.production?
+    if (request.env['HTTP_HOST'] != WWW_DOMAIN)
       redirect_to "http://#{WWW_DOMAIN}", :status => 301
     end
   end
