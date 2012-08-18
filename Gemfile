@@ -5,14 +5,11 @@ gem 'rails', '3.2.2'
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
+# group :development, :test do
+#    gem 'sqlite3'
+# end
 
-group :production do
-   gem 'pg'
-end
-
-group :development, :test do
-   gem 'sqlite3'
-end
+gem 'pg'
 
 gem 'json'
 
@@ -47,4 +44,4 @@ gem 'jquery-rails'
 # To use debugger
 # gem 'ruby-debug'
 
-gem 'bcrypt-ruby', '3.0.1'
+gem 'bcrypt-ruby', '~> 3.0.0'
