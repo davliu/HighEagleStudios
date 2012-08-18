@@ -1,5 +1,4 @@
 HighEagleStudios::Application.configure do
-  config.autoload_paths += %W( #{ config.root }/lib/middleware )
   # Settings specified here will take precedence over those in config/application.rb
 
   # Code is not reloaded between requests
@@ -65,4 +64,6 @@ HighEagleStudios::Application.configure do
   # Log the query plan for queries taking more than this (works
   # with SQLite, MySQL, and PostgreSQL)
   # config.active_record.auto_explain_threshold_in_seconds = 0.5
+
+  config.middleware.use "WwwMiddleware"
 end
