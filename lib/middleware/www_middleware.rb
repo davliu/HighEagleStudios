@@ -5,8 +5,9 @@ class WwwMiddleware
 
   def call(env)
     request = Rack::Request.new(env)
-    if !request.host.starts_with?("www.")
+    if !request.host.starts_with?("*.com")
       [301, {"Location" => request.url.sub("//*.com", "//www.*.com")}, self]
+      # [301, {"Location" => "http://www.higheaglestudios.com"}, self]
     else
       @app.call(env)
     end
