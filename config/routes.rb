@@ -1,4 +1,8 @@
 HighEagleStudios::Application.routes.draw do
+  get "users/new"
+
+  get "posts/new"
+
   get "pages/about"
   get "pages/index"
 

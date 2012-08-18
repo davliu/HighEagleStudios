@@ -46,3 +46,5 @@ gem 'jquery-rails'
 
 # To use debugger
 # gem 'ruby-debug'
+
+gem 'bcrypt-ruby', '3.0.1'
