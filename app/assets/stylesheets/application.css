@@ -1,6 +1,6 @@
 body {
   text-align: center;
-  font-family: arial, helvetica;
+  font-family: verdana, helvetica;
   font-size: 18px;
 }
 
@@ -13,10 +13,11 @@ body {
 
 a:visited, a:link {
   text-decoration: none;
+  padding: 0em 0.5em 0em 0.5em;
 }
 
-a.hover {
-  color: pink;
+a:hover {
+  color: #FF00FF;
 }
 
 footer {
