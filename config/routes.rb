@@ -1,6 +1,13 @@
 HighEagleStudios::Application.routes.draw do
-  resources :users
+  resources :users, :posts
+  resources :sessions, only: [:new, :create, :destroy]
+
+  match '/about', to: 'pages#about'
+  match '/', to: 'pages#index'
+
   match '/signup', to: 'users#new'
+  match '/signin', to: 'sessions#new'
+  match '/signout', to: 'sessions#destroy', via: :delete
 
   get "posts/new"
 

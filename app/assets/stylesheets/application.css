@@ -1,26 +1,9 @@
-body {
-  text-align: center;
-  font-family: verdana, helvetica;
-  font-size: 18px;
-}
-
-#content {
-  width: 880px;
-  margin-left: auto;
-  margin-right: auto;
-  text-align: left;
-}
-
-a:visited, a:link {
-  text-decoration: none;
-  padding: 0em 0.5em 0em 0.5em;
-}
-
-a:hover {
-  color: #FF00FF;
-}
-
-footer {
-  margin-top: 2em;
-  font-size: 14px;
-}
+/*
+ * This is a manifest file that'll automatically include all the stylesheets
+ * available in this directory and any sub-directories. You're free to add
+ * application-wide styles to this file and they'll appear at the top of the
+ * compiled file, but it's generally better to create a new file per style 
+ * scope.
+ *= require_self
+ *= require_tree . 
+*/
