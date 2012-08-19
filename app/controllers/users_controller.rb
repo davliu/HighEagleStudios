@@ -1,7 +1,7 @@
 class UsersController < ApplicationController
-  # before_filter :signed_in_user
-  # before_filter :has_admin, only: [:new, :create, :edit, :update]
-  # before_filter :same_user, only: [:edit, :update]
+  before_filter :signed_in_user
+  before_filter :has_admin, only: [:new, :create]
+  before_filter :same_user, only: [:edit, :update]
 
   layout 'blogger'
 
