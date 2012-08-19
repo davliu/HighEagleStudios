@@ -1,6 +1,7 @@
 class UsersController < ApplicationController
-  before_filter :signed_in_user, only: [:show, :index, :edit, :update]
-  before_filter :same_user, only: [:edit, :update]
+  # before_filter :signed_in_user
+  # before_filter :has_admin, only: [:new, :create, :edit, :update]
+  # before_filter :same_user, only: [:edit, :update]
 
   layout 'blogger'
 
@@ -48,5 +49,9 @@ class UsersController < ApplicationController
     def same_user
       @user = User.find(params[:id])
       redirect_to users_path, notice: "You can only edit your own profile" unless current_user?(@user)
+    end
+
+    def has_admin
+      current_user.admin?
     end
 end

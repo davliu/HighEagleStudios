@@ -30,4 +30,10 @@ module SessionsHelper
       redirect_to signin_url, notice: "Sign in before entering"
     end
   end
+
+  def has_admin
+    unless current_user.admin?
+      redirect_to signin_url, notice: "Admin privileges required"
+    end
+  end
 end
