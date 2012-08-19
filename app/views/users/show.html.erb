@@ -1,0 +1,17 @@
+<h1><%= @user.name %></h1>
+<dl>
+  <dt>Email</dt>
+  <dd><%= @user.email %></dd>
+</dl>
+
+<div class='row-fluid'>
+  <h2>Posts (<%= @user.posts.count %>)</h2>
+  <% if @user.posts.any? %>
+    <ol class="posts">
+      <%= render @posts %>
+    </ol>
+    <%= will_paginate @posts %>
+  <% else %>
+    User has made no posts
+  <% end %>
+</div>
