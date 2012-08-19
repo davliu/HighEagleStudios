@@ -50,8 +50,4 @@ class UsersController < ApplicationController
       @user = User.find(params[:id])
       redirect_to users_path, notice: "You can only edit your own profile" unless current_user?(@user)
     end
-
-    def has_admin
-      current_user.admin?
-    end
 end
