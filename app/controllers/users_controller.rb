@@ -1,5 +1,5 @@
 class UsersController < ApplicationController
-  before_filter :signed_in_user, only: [:show, :index, :edit, :update, :create]
+  before_filter :signed_in_user, only: [:show, :index, :edit, :update]
   before_filter :same_user, only: [:edit, :update]
 
   layout 'blogger'
