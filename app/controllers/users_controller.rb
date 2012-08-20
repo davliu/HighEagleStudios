@@ -1,6 +1,6 @@
 class UsersController < ApplicationController
-  before_filter :signed_in_user
-  before_filter :has_admin, only: [:new, :create]
+  # before_filter :signed_in_user
+  # before_filter :has_admin, only: [:new, :create]
   before_filter :same_user, only: [:edit, :update]
 
   layout 'blogger'
@@ -35,6 +35,7 @@ class UsersController < ApplicationController
 
   def create
     @user = User.new(params[:user])
+    @user.admin = true
 
     if @user.save
       sign_in @user
