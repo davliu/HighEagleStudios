@@ -2,6 +2,7 @@
 
 body {
   font-family: verdana;
+  font-family: 'Donegal One', serif;
 }
 
 body.blogger {
@@ -71,6 +72,30 @@ input[type="email"], input[type="url"], input[type="search"], input[type="tel"],
 }
 
 .right-panel {
+  padding-left: 1em;
   float: right;
-  width: 190;
+  width: 170;
+}
+
+h1, h2 {
+  color: #4E6ECF;
+}
+
+div.images-scroll {
+  overflow: scroll;
+}
+
+div.images-scroll ul {
+  list-style: none;
+  display: block;
+  white-space: nowrap;
+}
+
+div.images-scroll ul li {
+  display: inline;
+}
+
+#characters {
+  width: 500px;
+  text-align: center;
 }

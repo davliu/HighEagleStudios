@@ -4,4 +4,7 @@ class PagesController < ApplicationController
 
   def index
   end
+
+  def cat_tap_sequel
+  end
 end

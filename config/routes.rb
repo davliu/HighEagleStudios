@@ -3,6 +3,7 @@ HighEagleStudios::Application.routes.draw do
   resources :sessions, only: [:new, :create, :destroy]
 
   match '/about', to: 'pages#about'
+  match '/cattaptwo', to: 'pages#cat_tap_sequel'
   match '/', to: 'pages#index'
 
   match '/signup', to: 'users#new'
@@ -10,9 +11,6 @@ HighEagleStudios::Application.routes.draw do
   match '/signout', to: 'sessions#destroy', via: :delete
 
   get "posts/new"
-
-  get "pages/about"
-  get "pages/index"
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
